@@ -148,11 +148,11 @@ header {
 }
 
 /* Estilo da area de personagens */
-.personagem { grid-area: per; font-size: 3rem; justify-self: center;}
-.heroi { grid-area: her; width: 60%; justify-self: end; margin-top: 10%; }
-.inimigo1 { grid-area: ini1; width: 60%; justify-self: center; margin-top: 10%; }
-.inimigo2 { grid-area: ini2; width: 60%; justify-self: start; }
-.inimigo3 { grid-area: ini3; width: 60%; justify-self: center; margin-top: 10%; }
+.personagem { grid-area: per; font-size: 3rem; justify-self: center; margin-bottom: 10%;}
+.heroi { grid-area: her; width: 60%; justify-self: end; }
+.inimigo1 { grid-area: ini1; width: 60%; justify-self: center; margin-bottom: 2%; }
+.inimigo2 { grid-area: ini2; width: 60%; justify-self: start; margin-bottom: 2%; }
+.inimigo3 { grid-area: ini3; width: 60%; justify-self: center; }
 .inimigo4 { grid-area: ini4; width: 60%; justify-self: start; }
 
 .personagens {
@@ -223,7 +223,7 @@ header {
 
 .botao-download {
     width: 60%;
-    height: 10%;
+    height: 4rem;
     border-radius: 1rem;
     background-color: #000;
     color: #FFF;
@@ -264,6 +264,7 @@ header {
     align-items: center;
     background-color: #BBB;
     padding-top: 3%;
+    margin-top: 5%;
 }
 
 .feedback h2 {
