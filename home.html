@@ -15,12 +15,28 @@
             element.style.height = "6px";
             element.style.height = (element.scrollHeight)+"px";
         }
+
+        
+        window.onload = () => {
+            const header = document.getElementById("cabecalho")
+
+            const tamanhoTela = document.getElementById('tela-inicial').clientHeight
+            
+            window.addEventListener("scroll", () => {
+                if(window.scrollY > tamanhoTela) {
+                    header.classList.add("mudar-header")
+                } else {
+                    header.classList.remove("mudar-header")
+                }
+            })
+        }
+
     </script>
 </head>
 <body>
-    <div class="tela-inicial">
+    <div class="tela-inicial" id="tela-inicial">
         <div class="filtro-preto">
-            <header>
+            <header id="cabecalho">
                 <div class="logo-site">
                     <a href="/home.html">
                         <img src="logo" alt="Reckoning">
