@@ -29,6 +29,18 @@
                     header.classList.remove("mudar-header")
                 }
             })
+
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    let element = document.querySelector(this.getAttribute("href")).offsetTop
+                    window.scrollTo({
+                        top: element - document.getElementById('cabecalho').clientHeight,
+                        left: 0,
+                        behavior: "smooth",
+                    })
+                })
+            })
         }
 
     </script>
