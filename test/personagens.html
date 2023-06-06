@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // fetch de post armazenando em uma variável usando async await
+        async function foo() {
+            let personagens;
+        
+            const res = await fetch("http://localhost:3333/personagem", {
+                method: "GET",
+            })
+        
+            personagens = await res.json();
+
+            let html = '';
+            for(let personagem in personagens) {
+                const res = await fetch(`http://localhost:3333/imagem/${personagens[personagem].imagemIdImagem}`, {
+                    method: "GET",
+                })
+
+                let image = await res.json();
+                
+
+                let htmlSegment = `<div class="personagem">
+                                    <h2>${personagens[personagem].nome}</h2>
+                                    <p>${personagens[personagem].descricao}</p>
+                                    <img src=${image.imagem} />
+                                </div>`;
+
+                html += htmlSegment;        
+            };
+
+            let container = document.querySelector('.test');
+            container.innerHTML = html;
+        }
+        
+        foo()
+    </script>
+</head>
+<body>
+    <div class="test"></div>
+</body>
+</html>

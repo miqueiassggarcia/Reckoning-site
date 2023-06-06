@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // fetch de post armazenando em uma variável usando async await
+        async function foo() {
+            let feedbacks;
+        
+            const res = await fetch("http://localhost:3333/feedback", {
+                method: "GET",
+            })
+        
+            feedbacks = await res.json();
+
+            console.log(feedbacks)
+
+            let html = '';
+            feedbacks.forEach(feedback => {
+                let htmlSegment = `<div class="feedback">
+                                    <h2>${feedback.atribuicao}</h2>
+                                    <p>${feedback.feedback}</p>
+                                </div>`;
+
+                html += htmlSegment;
+            });
+
+            let container = document.querySelector('.test');
+            container.innerHTML = html;
+        }
+        
+        foo()
+    </script>
+</head>
+<body>
+    <div class="test"></div>
+</body>
+</html>
