@@ -30,28 +30,28 @@
 
 
 // fetch de get mais simples
-fetch('http://localhost:3333/imagem/64517b59-ed1c-415b-8212-8c4d6ff755a2')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(function (error) {
-    console.log(error);
-});
+// fetch('http://localhost:3333/imagem/64517b59-ed1c-415b-8212-8c4d6ff755a2')
+//   .then(response => response.json())
+//   .then(data => console.log(data))
+//   .catch(function (error) {
+//     console.log(error);
+// });
 
 
 // fetch de post armazenando dados em uma variável pelo próprio fetch
-// let imagem;
-// fetch("http://localhost:3333/imagem", {
-//     method: "POST",
-//     body: JSON.stringify({
-//         imagem: "jogo.com"
-//     }),
-//     headers: {
-//         'Content-Type': 'application/json',
-//     },
-// })
-// .then(response => response.json())
-// .then(json => {imagem = json})
-// .then(() => {console.log(imagem)})
+let imagem;
+fetch("http://localhost:3333/imagem", {
+    method: "POST",
+    body: JSON.stringify({
+        imagem: "jogo.com"
+    }),
+    headers: {
+        'Content-Type': 'application/json',
+    },
+})
+.then(response => response.json())
+.then(json => {imagem = json})
+.then(() => {console.log(imagem)})
 
 
 
