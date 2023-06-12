@@ -105,24 +105,49 @@
 // .then(response => response.json())
 // .then(json => console.log(json));
 
-async function login() {
-    let obj;
+// async function singin() {
+//     let obj;
+  
+//     const res = await fetch("http://localhost:3333/singup", {
+//         method: "POST",
+//         body: JSON.stringify({
+//             nome: "testeeeeeee",
+//             email: "safdfdsfdsaasfteste@gmail.com",
+//             password: "testedsfadfasdfdsfadfasdfsadaf"
+//         }),
+//         headers: {
+//             'Content-Type': 'application/json',
+//         }
+//     })
+  
+//     obj = await res.json();
+//     console.log(res.status)
+  
+//     console.log(obj);
+// }
 
-    const res = await fetch("http://localhost:3333/singup", {
+// singin()
+
+async function singin() {
+    let obj;
+  
+    const res = await fetch("http://localhost:3333/singin", {
         method: "POST",
         body: JSON.stringify({
-            nome: "testeeeeeee",
-            email: "safdasfteste@gmail.com",
-            password: "testedsfadfasdfdsfadfasdfsadaf"
+          email: "neverso@gmail.com",
+          password: "neverso"
         }),
         headers: {
-            'Content-Type': 'application/json',
+          'Content-Type': 'application/json',
         }
     })
-
+  
     obj = await res.json();
-
+    console.log(res.status)
+  
     console.log(obj);
+  
+    return obj;
 }
 
-login()
+singin()

@@ -9,41 +9,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Reckoning</title>
-
-    <script>
-        function autoAjust(element) {
-            element.style.height = "6px";
-            element.style.height = (element.scrollHeight)+"px";
-        }
-
-        
-        window.onload = () => {
-            const header = document.getElementById("cabecalho")
-
-            const tamanhoTela = document.getElementById('tela-inicial').clientHeight
-            
-            window.addEventListener("scroll", () => {
-                if(window.scrollY > tamanhoTela) {
-                    header.classList.add("mudar-header")
-                } else {
-                    header.classList.remove("mudar-header")
-                }
-            })
-
-            document.querySelectorAll('a[href^="#"]').forEach(link => {
-                link.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    let element = document.querySelector(this.getAttribute("href")).offsetTop
-                    window.scrollTo({
-                        top: element - document.getElementById('cabecalho').clientHeight,
-                        left: 0,
-                        behavior: "smooth",
-                    })
-                })
-            })
-        }
-
-    </script>
+    <script src="scripts/index.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="tela-inicial" id="tela-inicial">
