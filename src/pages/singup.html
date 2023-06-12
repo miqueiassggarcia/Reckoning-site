@@ -14,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="../scripts/singup.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="verificarUsuario();">
   <form method="post" id="form">
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome">
@@ -29,7 +29,16 @@
       let [nome, email, senha] = $( this ).serializeArray();
       event.preventDefault();
 
-      console.log(singup(nome.value, email.value, senha.value));
+      let response = await singup(nome.value, email.value, senha.value);
+      
+      let [usuario, status] = response;
+
+      if(status == 201) {
+        let usuarioId = usuario.idUsuario
+        localStorage.setItem("usuarioId", usuarioId)
+      } else if(status == 2) {
+
+      }
     })
   </script>
 </body>
