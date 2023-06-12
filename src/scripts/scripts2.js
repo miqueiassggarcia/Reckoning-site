@@ -39,19 +39,19 @@
 
 
 // fetch de post armazenando dados em uma variável pelo próprio fetch
-let imagem;
-fetch("http://localhost:3333/imagem", {
-    method: "POST",
-    body: JSON.stringify({
-        imagem: "jogo.com"
-    }),
-    headers: {
-        'Content-Type': 'application/json',
-    },
-})
-.then(response => response.json())
-.then(json => {imagem = json})
-.then(() => {console.log(imagem)})
+// let imagem;
+// fetch("http://localhost:3333/imagem", {
+//     method: "POST",
+//     body: JSON.stringify({
+//         imagem: "jogo.com"
+//     }),
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+// })
+// .then(response => response.json())
+// .then(json => {imagem = json})
+// .then(() => {console.log(imagem)})
 
 
 
@@ -104,3 +104,25 @@ fetch("http://localhost:3333/imagem", {
 // })
 // .then(response => response.json())
 // .then(json => console.log(json));
+
+async function login() {
+    let obj;
+
+    const res = await fetch("http://localhost:3333/singup", {
+        method: "POST",
+        body: JSON.stringify({
+            nome: "testeeeeeee",
+            email: "safdasfteste@gmail.com",
+            password: "testedsfadfasdfdsfadfasdfsadaf"
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+
+    obj = await res.json();
+
+    console.log(obj);
+}
+
+login()

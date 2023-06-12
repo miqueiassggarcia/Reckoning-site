@@ -52,7 +52,7 @@ body::-webkit-scrollbar {
 .tela-inicial {
     height: 121%;
     width: 100%;
-    background-image: url("./Images/home background.png");
+    background-image: url("../Images/home background.png");
     background-repeat: no-repeat;
     background-size: 100%;
     overflow: hidden;
