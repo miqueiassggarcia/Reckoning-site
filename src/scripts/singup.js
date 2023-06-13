@@ -1,31 +1,10 @@
-async function verificarUsuario() {
-    let usuario = localStorage.getItem("usuarioId");
-
-    if(usuario) {
-        let dadosUsuario = await fetch(`http://localhost:3333/usuario/${usuario}`, {
-        method: "GET",
-        headers: {
-            'Content-Type': 'application/json',
-        }
-        })
-
-        let status = dadosUsuario.status;
-        let dados = await dadosUsuario.json();
-
-        if(status == 200) {
-            localStorage.setItem("dadosUsuario", JSON.stringify(dados));
-            window.location.replace("http://localhost:5500/src");
-        } else if (status == 404) {
-            localStorage.removeItem("usuarioId");
-        }
-    }
-}
+import { url } from "../globalUrl";
 
 async function singup(nome, email, senha) {
   let obj;
   let status;
 
-  const res = await fetch("http://localhost:3333/singup", {
+  const res = await fetch(`${url}:3333/singup`, {
       method: "POST",
       body: JSON.stringify({
           nome: nome,
