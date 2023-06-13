@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="singin" lang="pt-BR">
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,33 +11,30 @@
   <title>Singin reckoning</title>
     
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="../styles/style-index.css">
   <script src="../scripts/singin.js" type="text/javascript"></script>
-  <script src="../scripts/loginVerification.js" type="text/javascript"></script>
-  <script src="../global.js" type="text/javascript"></script>
-
-  <style>
-    body {
-      background-color: black;
-      color: aliceblue;
-    }
-  </style>
 </head>
-<body onload="verificarUsuario();">
-  <form method="post" id="form">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <label for="email">Senha:</label>
-    <input type="password" id="senha" name="senha">
-    <button type="submit">Entrar</button>
-  </form>
+<body>
+  <div class="login">
+    <h1>Login</h1>
+    <form method="post" id="form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <br>
+      <label for="email">Senha:</label>
+      <input type="password" id="senha" name="senha">
+      <br>
+      <button type="submit">Entrar</button>
+      <p>Ainda não tem uma conta?</p>
+      <a href="../pages/singup.html">Cadastre-se</a>
+  </div>
   <script type="text/javascript">
     $( "form" ).submit( async function( event ) {
       let [email, senha] = $( this ).serializeArray();
       event.preventDefault();
 
-      console.log( await singin(email.value, senha.value) )
+      console.log(singin(email.value, senha.value));
     })
   </script>
 </body>
