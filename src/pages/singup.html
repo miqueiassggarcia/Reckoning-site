@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="singup" lang="pt-BR">
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,29 +11,27 @@
   <title>Singin reckoning</title>
     
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="../styles/style-index.css">
   <script src="../scripts/singup.js" type="text/javascript"></script>
-  <script src="../scripts/loginVerification.js" type="text/javascript"></script>
-  <script src="../global.js" type="text/javascript"></script>
-
-  <style>
-    body {
-      background-color: black;
-      color: aliceblue;
-    }
-  </style>
 </head>
 <body onload="verificarUsuario();">
-  <form method="post" id="form">
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-    <label for="email">Senha:</label>
-    <input type="password" id="senha" name="senha">
-    <button type="submit">Entrar</button>
-  </form>
+  <div>
+    <form method="post" id="form">
+      <h1>Cadastro</h1>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome">
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <br>
+      <label for="email">Senha:</label>
+      <input type="password" id="senha" name="senha">
+      <button type="submit">Entrar</button>
+      <p>Já possui uma conta?</p>
+      <a href="../pages/singin.html">Login</a>
+    </form>
+  </div>
   <script type="text/javascript">
     $( "form" ).submit( async function( event ) {
       let [nome, email, senha] = $( this ).serializeArray();
