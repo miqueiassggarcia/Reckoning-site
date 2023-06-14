@@ -135,11 +135,11 @@ header {
 .titulo-apresentacao { grid-area: titulo; justify-self: center; margin-top: 5%; font-size: 3rem;}
 .descricao { grid-area: descricao; justify-self: center; margin-bottom: 5%; font-size: 1.2rem; margin-top: 1.2rem;}
 .imagem1 { grid-area: imagem1; width: 70%; justify-self: end; margin-right: 5%; }
-.texto1 { grid-area: texto1; width: 70%; text-align: justify; }
-.texto2 { grid-area: texto2; width: 70%; justify-self: end; margin-right: 5%; }
+.texto1 { grid-area: texto1; width: 70%; text-align: justify; font-size: 1.5rem;}
+.texto2 { grid-area: texto2; width: 70%; justify-self: end; margin-right: 5%; font-size: 1.5rem;}
 .imagem2 { grid-area: imagem2; width: 70%; text-align: justify; }
 .imagem3 { grid-area: imagem3; width: 70%; justify-self: end; margin-right: 5%; margin-bottom: 5%; }
-.texto3 { grid-area: texto3; width: 70%; text-align: justify; margin-bottom: 5%; }
+.texto3 { grid-area: texto3; width: 70%; text-align: justify; margin-bottom: 5%; font-size: 1.5rem;}
 
 .apresentacao {
     display: grid;
@@ -154,6 +154,7 @@ header {
     justify-items: stretch;
     background-color: #333;
     color: #FFF;
+    padding-bottom: 3rem;
 }
 
 
@@ -166,6 +167,7 @@ header {
     gap: 1.5rem;
     width: 80%;
     margin: auto;
+    padding-top: 3rem;
     padding-bottom: 5rem;
     text-align: justify;
 }
@@ -180,7 +182,7 @@ header {
 }
 
 /* Estilo da area de personagens */
-.personagem { grid-area: per; font-size: 3rem; justify-self: center; margin-bottom: 10%;}
+.personagem { grid-area: per; font-size: 3rem; justify-self: center; margin-bottom: 5%;}
 .heroi { grid-area: her; width: 60%; justify-self: end; }
 .inimigo1 { grid-area: ini1; width: 60%; justify-self: center; margin-bottom: 2%; }
 .inimigo2 { grid-area: ini2; width: 60%; justify-self: start; margin-bottom: 2%; }
@@ -196,6 +198,10 @@ header {
     ;
     align-items: stretch;
     justify-items: stretch;
+    background-color: #333;
+    color: #FFF;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 
