@@ -1,5 +1,3 @@
-import { url } from "../globalUrl";
-
 async function singup(nome, email, senha) {
   let obj;
   let status;
@@ -18,6 +16,5 @@ async function singup(nome, email, senha) {
 
   obj = await res.json();
   status = res.status;
-
   return [obj, status];
 }
