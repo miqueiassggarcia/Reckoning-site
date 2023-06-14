@@ -7,7 +7,8 @@ function userModal () {
               <button onclick="user.close()">X</button>
               <div>
                 <span>${usuario.nome}</span>
-                <button onclick="logOut()">logout</button>
+                <a href="pages/conta.html">Conta</a>
+                <button onclick="logOut()">Logout</button>
               </div>
             </form>`
   } else {

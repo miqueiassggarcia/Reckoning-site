@@ -4,12 +4,17 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.logo-site a img {
+    width: 30%;
+}
 
 /* Estilo da area inicial e menu */
 .tela-inicial {
-    height: 121%;
+    height: 90%;
     width: 100%;
-    background-image: url("../../Images/home background.png");
+    background-image: url("../../Images/background.png");
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     background-size: 100%;
     overflow: hidden;
@@ -45,6 +50,8 @@ header {
     font-size: 1.3rem;
 }
 
+
+/* Estilizando dialog */
 #user {
     position: fixed;
     padding: 1rem;
@@ -80,6 +87,7 @@ header {
     padding: 0.2rem 0.4rem;
     border: none;
     border-radius: 100%;
+    font-size: 1rem;
 }
 
 #user div {
@@ -97,8 +105,14 @@ header {
     margin-bottom: 0.6rem;
 }
 
+#user div :first-child {
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #FFF;
+}
+
 .titulo-site {
-    height: 60%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
