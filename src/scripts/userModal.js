@@ -5,14 +5,18 @@ function userModal () {
   if(usuario) {
     html = `<form method="dialog">
               <button onclick="user.close()">X</button>
-              <span>${usuario.nome}</span>
-              <button onclick="logOut()">sair</button>
+              <div>
+                <span>${usuario.nome}</span>
+                <button onclick="logOut()">logout</button>
+              </div>
             </form>`
   } else {
     html = `<form method="dialog">
-              <button onclick="user.close()">close</button>
-              <a href="pages/singin.html">Singin</a>
-              <a href="pages/singup.html">Singup</a>
+              <button onclick="user.close()">X</button>
+              <div>
+                <a href="pages/singin.html">Singin</a>
+                <a href="pages/singup.html">Singup</a>
+              </div>
             </form>`
   }
 
