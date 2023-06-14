@@ -1,5 +1,5 @@
 async function singup(nome, email, senha) {
-  let obj;
+  let usuario;
   let status;
 
   const res = await fetch(`${url}:3333/singup`, {
@@ -13,8 +13,17 @@ async function singup(nome, email, senha) {
           'Content-Type': 'application/json',
       }
   })
-
-  obj = await res.json();
+  
+  usuario = await res.json();
   status = res.status;
-  return [obj, status];
+
+  if(status == 201) {
+    localStorage.setItem("usuarioId", usuario.idUsuario)
+    delete usuario.idUsuario;
+    localStorage.setItem("dadosUsuario", JSON.stringify(usuario))
+
+    window.location.replace(`${url}:5500/src`);
+  } else if(status == 2) {
+
+  }
 }

@@ -40,16 +40,7 @@
       let [nome, email, senha] = $( this ).serializeArray();
       event.preventDefault();
 
-      let response = await singup(nome.value, email.value, senha.value);
-      
-      let [usuario, status] = response;
-
-      if(status == 201) {
-        let usuarioId = usuario.idUsuario
-        localStorage.setItem("usuarioId", usuarioId)
-      } else if(status == 2) {
-
-      }
+      await singup(nome.value, email.value, senha.value);
     })
   </script>
 </body>

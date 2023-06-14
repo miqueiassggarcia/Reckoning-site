@@ -1,5 +1,5 @@
 async function singin(email, senha) {
-  let obj;
+  let usuario;
   let status;
 
   const res = await fetch(`${url}:3333/singin`, {
@@ -13,13 +13,13 @@ async function singin(email, senha) {
       }
   })
 
-  obj = await res.json();
+  usuario = await res.json();
   status = res.status;
 
   if(status == 200) {
-    localStorage.setItem("usuarioId", obj.idUsuario)
+    localStorage.setItem("usuarioId", usuario.idUsuario)
 
-    const dadosUsuario = await fetch(`${url}:3333/usuario/${obj.idUsuario}`, {
+    const dadosUsuario = await fetch(`${url}:3333/usuario/${usuario.idUsuario}`, {
       method: "GET",
       headers: {
         'Content-Type': 'application/json',

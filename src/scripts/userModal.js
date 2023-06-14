@@ -4,16 +4,16 @@ function userModal () {
 
   if(usuario) {
     html = `<form method="dialog">
+              <button onclick="user.close()">X</button>
               <span>${usuario.nome}</span>
-              <button onclick="user.close()">close</button>
               <button onclick="logOut()">sair</button>
             </form>`
   } else {
     html = `<form method="dialog">
-            <a href="pages/singin.html">Singin</a>
-            <a href="pages/singup.html">Singup</a>
-            <button onclick="user.close()">close</button>
-          </form>`
+              <button onclick="user.close()">close</button>
+              <a href="pages/singin.html">Singin</a>
+              <a href="pages/singup.html">Singup</a>
+            </form>`
   }
 
   let container = document.querySelector('#user');
