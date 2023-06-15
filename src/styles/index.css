@@ -366,3 +366,12 @@ footer span {
 footer img {
     width: 1.8rem;
 }
+
+.userButton {
+    background: transparent;
+    border: none;
+}
+
+.userButton img {
+    width: 2rem;
+}

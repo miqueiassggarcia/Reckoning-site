@@ -2,7 +2,8 @@ function carregarUsuario() {
   let html;
   let dados = JSON.parse(localStorage.getItem("dadosUsuario"));
 
-  html = `<span>Nome de usuário: ${dados.nome}</span>
+  html = `<h2>Dados do perfil:</h2>
+          <span>Nome de usuário: ${dados.nome}</span>
           <span>Nome de usuário: ${dados.email}</span>`
 
   let container = document.querySelector('.dados');
