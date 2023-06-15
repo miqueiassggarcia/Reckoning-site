@@ -215,6 +215,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: justify;
+    padding-bottom: 3rem;
 }
 
 .sobre > * { /* Todos da div */
@@ -246,6 +247,9 @@ header {
         ;
     justify-items: stretch;
     align-items: stretch;
+    background-color: #333;
+    color: #FFF;
+    padding-bottom: 3rem;
 }
 
 .download {
@@ -301,8 +305,7 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: #BBB;
-    padding-top: 3%;
-    margin-top: 5%;
+    padding-top: 7%;
 }
 
 .feedback h2 {
