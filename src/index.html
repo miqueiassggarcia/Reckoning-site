@@ -69,11 +69,11 @@
     <div class="personagens" id="personagens">
         <div class="vazio"></div>
         <h2 class="personagem">Personagens</h2>
-        <img class="heroi" src="../Images/cats-eyes-gc0671475b_1280.jpg" width="350px" height="710px" alt="">
-        <img class="inimigo1" src="../Images/cats-eyes-gc0671475b_1280.jpg" width="350px" height="350px" alt="github">
-        <img class="inimigo2" src="../Images/cats-eyes-gc0671475b_1280.jpg" width="350px" height="350px" alt="linkedin">
-        <img class="inimigo3" src="../Images/cats-eyes-gc0671475b_1280.jpg" width="350px" height="350px" alt="twitter">
-        <img class="inimigo4" src="../Images/cats-eyes-gc0671475b_1280.jpg" width="350px" height="350px" alt="instagram">
+        <img class="heroi" src="../Images/player.png" width="350px" height="710px" alt="">
+        <img class="inimigo1" src="../Images/Skeleton.png" width="350px" height="350px" alt="Skeleton">
+        <img class="inimigo2" src="../Images/SkeletonDeath.png" width="350px" height="350px" alt="SkeletonDeath">
+        <img class="inimigo3" src="../Images/treino.png" width="350px" height="350px" alt="treino">
+        <img class="inimigo4" src="../Images/quebrando.png" width="350px" height="350px" alt="quebrando">
     </div>
 
     <div class="sobre" id="sobre">
@@ -111,14 +111,14 @@
         </lu>
         <div class="download" id="download">
             <h3>Download now for free</h3>
-            <button class="botao-download">Download</button>
+            <button onclick="window.open('https://github.com/roxy22788/Reckoning', '_blank')" class="botao-download">Download</button>
             <p>Disponível também nas plataformas de games</p>
             <div class="platformas-download">
                 <img src="../Images/cats-eyes-gc0671475b_1280.jpg" width="100px" height="100px" alt="">
                 <img src="../Images/cats-eyes-gc0671475b_1280.jpg" width="100px" height="100px" alt="">
             </div>
         </div>
-        <img class="imagem-ilustrativa" src="../Images/cats-eyes-gc0671475b_1280.jpg" alt="">
+        <img class="imagem-ilustrativa" src="../Images/cenario.png" alt="cenario">
     </div>
 
     <div class="feedback">
@@ -131,10 +131,26 @@
                 <label for="site">Site</label>
                 <input type="radio" id="site" name="feedback" value="site">
             </div>
-            <textarea name="comentario" cols="10" rows="10" oninput="autoAjust(this)" placeholder="Escreva aqui seu comentário"></textarea>
+            <textarea id="comentario" name="comentario" cols="10" rows="10" oninput="autoAjust(this)" placeholder="Escreva aqui seu comentário"></textarea>
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+    
+    <script type="text/javascript">
+        $( "form" ).submit( async function( event ) {
+            event.preventDefault();
+
+            let feedbackValue = $("input[name='feedback']:checked").val();
+            var comentarioValue = $("#comentario").val();
+
+            if (feedbackValue && comentarioValue) {
+            await feedback(feedbackValue, comentarioValue);
+        } else {
+            console.log("Nenhum feedback selecionado");
+        }
+        })
+    </script>
 
     <footer>
         <a href="/" id="suporte">Suporte</a>
