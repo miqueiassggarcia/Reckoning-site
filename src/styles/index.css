@@ -235,7 +235,7 @@ header {
 .recom-requisitos { grid-area: recom; justify-self: center; width: 60%; font-size: 2rem; margin-bottom: 1%; }
 .specs2 { grid-area: specs2; justify-self: center; width: 60%; font-size: 1.2rem; }
 .download { grid-area: download; justify-self: center; width: 60%; margin-top: 5%; font-size: 2rem; margin-top: 5%;}
-.imagem-ilustrativa { grid-area: imagem; justify-self: center; align-self: center; width: 70%; height: 100%; margin-top: 15%; border-radius: 10%; }
+.imagem-ilustrativa { grid-area: imagem; justify-self: center; align-self: center; width: 33rem; height: 23rem; margin-top: 15%; border-radius: 10%; }
 
 .especificacoes {
     display: grid;

@@ -9,8 +9,8 @@
 }
 
 .singup {
-  width: 40%;
-  height: 70%;
+  width: 36rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
