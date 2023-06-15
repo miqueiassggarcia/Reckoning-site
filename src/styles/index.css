@@ -235,7 +235,7 @@ header {
 .recom-requisitos { grid-area: recom; justify-self: center; width: 60%; font-size: 2rem; margin-bottom: 1%; }
 .specs2 { grid-area: specs2; justify-self: center; width: 60%; font-size: 1.2rem; }
 .download { grid-area: download; justify-self: center; width: 60%; margin-top: 5%; font-size: 2rem; margin-top: 5%;}
-.imagem-ilustrativa { grid-area: imagem; justify-self: center; align-self: center; width: 80%; height: 60%; margin-top: 5%; border-radius: 10%; }
+.imagem-ilustrativa { grid-area: imagem; justify-self: center; align-self: center; width: 70%; height: 100%; margin-top: 15%; border-radius: 10%; }
 
 .especificacoes {
     display: grid;
@@ -249,14 +249,14 @@ header {
     align-items: stretch;
     background-color: #333;
     color: #FFF;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .download {
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-top: 30%;
+    margin-top: 20%;
 }
 
 .download h3 {
@@ -281,23 +281,6 @@ header {
     border: 1px solid #000;
 }
 
-.download p {
-    margin-top: 15%;
-    font-size: 2rem;
-}
-
-.platformas-download {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 5%;
-    margin-top: 5%;
-}
-
-.platformas-download img {
-    width: 20%;
-}
-
 
 /* Estilo do feedback */
 .feedback {
@@ -305,7 +288,7 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: #BBB;
-    padding-top: 7%;
+    padding-top: 5%;
 }
 
 .feedback h2 {
