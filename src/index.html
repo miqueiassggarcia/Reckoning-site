@@ -121,10 +121,16 @@
         <form>
             <div class="selecao-feedback">
                 <p>Para quem é o seu feedback:</p>
-                <label for="jogo">Jogo</label>
-                <input type="radio" id="jogo" name="feedback" value="jogo">
-                <label for="site">Site</label>
-                <input type="radio" id="site" name="feedback" value="site">
+                <div class="radioButtons">
+                    <div>
+                        <label for="jogo">Jogo</label>
+                        <input type="radio" id="jogo" name="feedback" value="jogo">
+                    </div>
+                    <div>
+                        <label for="site">Site</label>
+                        <input type="radio" id="site" name="feedback" value="site">
+                    </div>
+                </div>
             </div>
             <textarea id="comentario" name="comentario" cols="10" rows="10" oninput="autoAjust(this)" placeholder="Escreva aqui seu comentário"></textarea>
             <button type="submit">Enviar</button>

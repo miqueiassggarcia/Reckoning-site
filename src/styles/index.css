@@ -296,6 +296,10 @@ header {
     margin-bottom: 1%;
 }
 
+.selecao-feedback {
+    font-size: 1.3rem;
+}
+
 .feedback form {
     display: flex;
     flex-direction: column;
@@ -374,4 +378,12 @@ footer img {
 
 .userButton img {
     width: 2rem;
+}
+
+.radioButtons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 1rem;
 }
